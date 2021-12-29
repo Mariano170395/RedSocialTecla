@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.nav {
+  width: 100%;
+  height: 15vmin;
+  background-color: rgb(100, 176, 238);
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px white solid;
+
+}
+
+.nav img{
+    margin-left: 5vmin;
+    width: 30vmin;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12vmin;
+  margin-bottom: 12vmin;
+  background-color: rgb(100, 176, 238);
+  border-radius: 5vmin;
+  border: 3px solid white;
+  
+  
+}
+
+.body{
+    background-color: rgb(236, 236, 236);
+    margin: 0%;
+    padding: 0%;
+}
+
+.main h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 7vmin;
+    color: white;
+    margin: 1vmin;
+
+}
+
+.main h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 4vmin;
+    color: white;
+    margin: 1vmin;
+}
+
+.main input{
+    width: 70%;
+}
+
+
+.main button {
+    margin-top: 2vmin;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 3vmin;
+    font-weight: bold;
+}
+
+.main button:hover{
+    color: white;
+}
+
+.olvidaste{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5vmin;
+}
+
+
+/*Media queries*/
+
+ @media only screen and (max-width: 375px){
+    .main {
+        width: 60%;
+        margin-top: 25vmin;
+        margin-bottom: 20vmin;
+        height: 75vmin ;
+    }
+
+    .footer{
+        width: 100%;
+        height: 40vmin;
+        background-color: rgb(100, 176, 238);
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .main {
+        width: 60%;
+        margin-top: 25vmin;
+        margin-bottom: 20vmin;
+        height: 75vmin ;
+    }
+
+    .footer{
+        width: 100%;
+        height: 40vmin;
+        background-color: rgb(100, 176, 238);
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .main {
+        width: 60%;
+        margin-top: 25vmin;
+        margin-bottom: 20vmin;
+        height: 75vmin ;
+    }
+
+    .footer{
+        width: 100%;
+        height: 40vmin;
+        background-color: rgb(100, 176, 238);
+    }
+}
+
+
+@media only screen and (max-width: 1024px){
+    .main {
+        width: 60%;
+        margin-top: 25vmin;
+        margin-bottom: 20vmin;
+        height: 75vmin ;
+    }
+
+    .footer{
+        width: 100%;
+        height: 40vmin;
+        background-color: rgb(100, 176, 238);
+    }
+}
