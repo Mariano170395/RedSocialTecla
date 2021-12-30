@@ -11,7 +11,8 @@ module.exports = (app) => {
   app.get("/usuario/:id", async (req, res) => {
     const { id } = req.params;
     let result = await gameController.listGames();
-    res.json(result.find((e) => e.user_id == id));
+    let resultFilt = result.find((e) => e.user_id == id);
+    res.json(resultFilt);
   });
 
   //Agregar usuario
@@ -19,6 +20,14 @@ module.exports = (app) => {
     let juego = req.body;
     console.log(juego);
     let result = await gameController.addGame(juego);
+    res.json(result);
+  });
+
+  //Agregar un post
+  app.post("/post", async (req, res) => {
+    let post = req.body;
+    console.log(post);
+    let result = await gameController.addPt(post);
     res.json(result);
   });
 
@@ -50,16 +59,10 @@ module.exports = (app) => {
     res.json(updatePais);
   });
 
-    //Modificar Imagen
-    app.put("/usuario/imagen/:id", async (req, res) => {
-      const nuevaImg = req.body;
-      let updateImagen = await gameController.updatearImagen(nuevaImg);
-      res.json(updateImagen);
-    });
-  
-
-  //Login
-  app.get("/login", async (req, res) => {
-    res.sendFile("./");
+  //Modificar Imagen
+  app.put("/usuario/imagen/:id", async (req, res) => {
+    const nuevaImg = req.body;
+    let updateImagen = await gameController.updatearImagen(nuevaImg);
+    res.json(updateImagen);
   });
 };

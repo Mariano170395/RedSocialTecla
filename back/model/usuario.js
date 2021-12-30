@@ -1,4 +1,7 @@
 const sequelize = require("../db/conexion");
+const usuario = require("../view/usuario");
+
+
 
 let list = async () => {
   let result = await sequelize.query("SELECT * FROM crear_usuario");
@@ -6,11 +9,26 @@ let list = async () => {
   return result0;
 };
 
+//SELECT * from USERS where password=req.body.password and username=req.body.username
+//Res con los datos del usuario
+//fetch con los datos del usuario
+
+let login = async (usuario)=>{
+  let result = await sequelize.query(`SELECT * FROM crear_usuario WHERE contrasena_usuario= '${usuario.contrasena_usuario}'`)
+}
+
 let add = async (usuario) => {
   await sequelize.query(
-    `INSERT INTO crear_usuario ( user_id nombres_usuario, correo_usuario, contrasena_usuario, pais, imagen_usuario) VALUES ('${usuario.nombres_usuario}', '${usuario.apellidos_usuario}', '${usuario.correo_usuario}', '${usuario.contrasena_usuario}', '${usuario.pais}', '${usuario.imagen_usuario}')`
+    `INSERT INTO crear_usuario ( nombres_usuario, correo_usuario, contrasena_usuario, pais, imagen_usuario, hobby_usuario, puesto_usuario) VALUES ('${usuario.nombres_usuario}', '${usuario.correo_usuario}', '${usuario.contrasena_usuario}', '${usuario.pais}', '${usuario.imagen_usuario}', '${usuario.hobby_usuario}',  '${usuario.puesto_usuario}')`
   );
 };
+
+let addPst = async (pst) =>{
+  await sequelize.query(
+    `INSERT INTO crear_post ( titulo_post ) VALUES ('${pst.titulo_post}')`
+  )
+}
+
 
 let updateName = async (usuario) => {
   await sequelize.query(
@@ -42,16 +60,14 @@ let updateImagen = async (usuario) => {
   );
 };
 
-let login = async (usuario) => {
-  await sequelize.query(
-    `SELECT correo_usuario && contrasena_usuario FROM crear_usuario`
-  );
-};
 
 module.exports.list = list;
 module.exports.add = add;
+module.exports.addPost = addPst;
 module.exports.updateNam = updateName;
 module.exports.updateMai = updateMail;
 module.exports.updatePass = updatePassword;
 module.exports.updatePai = updatePais;
 module.exports.updateImg = updateImagen;
+module.exports.loginUser = login;
+

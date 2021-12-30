@@ -9,7 +9,7 @@
   </head>
   <body>
     <nav class="nav">
-      <a href="../Login/index.html"><img
+      <a href="../Login/login.html"><img
         src="./Img/a23b268e-photoroom-20210930-182904_10c806v08104e03h01d028.png"
         alt="Logo"
       /></a>
@@ -20,27 +20,31 @@
       </div>
       <div class="contenedorDatosMax">
         <div class="contenedorDatos">
-            <label for="">Nombres</label>
+            <label for="">Ingresa tu nombre completo</label>
             <input type="text" name="nombre" id="nombreDatos">
-            </br>
-            <label for="">Apellidos</label>
-            <input type="text" name="apellidos" id="apellidosDatos">
             </br>
             <label for="">Email</label>
             <input type="email" name="email" id="emailDatos">
             </br>
             <label for="">Contraseña</label>
-            <input type="text" name="numero" id="numDatos">
+            <input type="text" name="numero" id="passDatos">
             </br>
             <label for="">País</label>
-            <input type="pais" name="confirma" id="passDatos2">
+            <input type="pais" name="confirma" id="paisDatos">
             </br>
-            <label for="">Sube tu foto</label>
-            <input type="file" name="foto" id="fotoDatos">
+            <label for="">Que hobby tienes?</label>
+            <input type="text" name="hobby" id="hobbyDatos">
             </br>
-            <button type="submit">Enviar</button>
+            <label for="">Que puesto tienes?</label>
+            <input type="text" name="puesto" id="puestoDatos">
+            </br>
+            <label for="">Ingresa el link de tu foto de perfil</label>
+            <input type="text" name="foto" id="fotoDatos">
+            </br>
+            <button type="submit" onclick="registroUser()">Enviar</button>
         </form>
       </div>
     </main>
   </body>
+  <script src="./crear.js"></script>
 </html>

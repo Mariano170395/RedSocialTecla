@@ -37,3 +37,20 @@ module.exports.getPass = async (user) => {
   let pass = await juegoModel.login(user);
   return pass;
 };
+
+module.exports.addPt = async (pt) => {
+try {
+  await juegoModel.addPost(pt);
+  return "Siuuuuu";
+} catch (error) {
+  return error
+}
+};
+
+module.exports.logUser = async (user)=>{
+  try {
+    await juegoModel.loginUser(user)
+  } catch (error) {
+    return error
+  }
+}
