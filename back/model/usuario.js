@@ -9,19 +9,16 @@ let list = async () => {
   return result0;
 };
 
-//SELECT * from USERS where password=req.body.password and username=req.body.username
-//Res con los datos del usuario
-//fetch con los datos del usuario
-
 let login = async (usuario)=>{
-  let result = await sequelize.query(`SELECT * FROM crear_usuario WHERE contrasena_usuario= '${usuario.contrasena_usuario}'`)
+  let result = await sequelize.query(`SELECT * FROM crear_usuario WHERE contrasena_usuario = '${usuario.contrasena_usuario}' AND correo_usuario = '${usuario.correo_usuario}'`)
+  return result[0]
 }
 
 let add = async (usuario) => {
   await sequelize.query(
     `INSERT INTO crear_usuario ( nombres_usuario, correo_usuario, contrasena_usuario, pais, imagen_usuario, hobby_usuario, puesto_usuario) VALUES ('${usuario.nombres_usuario}', '${usuario.correo_usuario}', '${usuario.contrasena_usuario}', '${usuario.pais}', '${usuario.imagen_usuario}', '${usuario.hobby_usuario}',  '${usuario.puesto_usuario}')`
   );
-};
+};  
 
 let addPst = async (pst) =>{
   await sequelize.query(

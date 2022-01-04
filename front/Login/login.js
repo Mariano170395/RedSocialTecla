@@ -1,22 +1,40 @@
 
 
-let login = async () => {
-  const respuesta = await fetch("http://localhost:3000/usuario/");
-  let respuestajson = await respuesta.json();
-  let hola;
+ let usuario 
 
-  for (let i = 0; i < respuestajson.length; i++) {
-    let respuestaUser = respuestajson[i].nombres_usuario;
-    let respuestaPass = respuestajson[i].contrasena_usuario;
+ let login = async () => {
+   const user = {
+     correo_usuario: document.getElementById("emailDatos").value,
+     contrasena_usuario: document.getElementById("passDatos").value,
+   };
 
-    if (respuestaUser == document.getElementById("User").value && respuestaPass == document.getElementById('Pass').value ) {
-      hola = "Bienvenido!";
-      window.location.href = '../Feed/Ejercicio-14/feed.html'
-    } else {
-        hola = 'Tu correo o tu password es incorrecto'
-        window.location.href = '../Feed/Ejercicio-14/feed.html'
-    }
-  }
+   const claves = Object.keys(user)
+   let errors = []
+   for (let clave of claves){
+       if(user[clave]===''){
+           errors.push(clave)
+       }
+   }
 
-  alert(hola);
-};
+   if(errors.length>0){
+     alert(`Falta completar ${errors}`)
+ }else{
+
+   let response = await fetch("http://localhost:3000/login", {
+     method: "POST",
+     headers: {
+       "content-Type": "application/json",
+     },
+     body: JSON.stringify(user),
+   });
+   let resjson = await response.json();
+   console.log(resjson);
+   return (resjson)
+   .then(window.location.href = `../Feed/Ejercicio-14/feed.html`)
+  
+ }
+
+ };
+
+ console.log(resjson)
+

@@ -49,7 +49,8 @@ try {
 
 module.exports.logUser = async (user)=>{
   try {
-    await juegoModel.loginUser(user)
+   let result = await juegoModel.loginUser(user)
+   return result
   } catch (error) {
     return error
   }
