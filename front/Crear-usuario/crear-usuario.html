@@ -5,46 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teclanautas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="nav">
-      <a href="../Login/login.html"><img
-        src="./Img/a23b268e-photoroom-20210930-182904_10c806v08104e03h01d028.png"
-        alt="Logo"
+      <a href="../Login/login.html"
+        ><img
+          src="./Img/a23b268e-photoroom-20210930-182904_10c806v08104e03h01d028.png"
+          alt="Logo"
       /></a>
     </nav>
-    <main class="body">
-      <div class="contenedorTitulo">
-        <h1>Agrega tus Datos</h1>
-      </div>
-      <div class="contenedorDatosMax">
-        <div class="contenedorDatos">
-            <label for="">Ingresa tu nombre completo</label>
-            <input type="text" name="nombre" id="nombreDatos">
-            </br>
-            <label for="">Email</label>
-            <input type="email" name="email" id="emailDatos">
-            </br>
-            <label for="">Contraseña</label>
-            <input type="text" name="numero" id="passDatos">
-            </br>
-            <label for="">País</label>
-            <input type="pais" name="confirma" id="paisDatos">
-            </br>
-            <label for="">Que hobby tienes?</label>
-            <input type="text" name="hobby" id="hobbyDatos">
-            </br>
-            <label for="">Que puesto tienes?</label>
-            <input type="text" name="puesto" id="puestoDatos">
-            </br>
-            <label for="">Ingresa el link de tu foto de perfil</label>
-            <input type="text" name="foto" id="fotoDatos">
-            </br>
-            <button type="submit" onclick="registroUser()">Enviar</button>
-        </form>
-      </div>
-    </main>
+    <div class="container-sm">
+      <h1>Ingresa tus datos</h1>
+      <h2>Nombre Completo</h2>
+      <input type="text" id="nombreDatos" />
+      <h2>Email</h2>
+      <input type="email" id="emailDatos" />
+      <h2>Contraseña</h2>
+      <input type="text" id="passDatos" />
+      <h2>País</h2>
+      <input type="text" id="paisDatos" />
+      <h2>Hobby</h2>
+      <input type="text" id="hobbyDatos" />
+      <h2>Puesto</h2>
+      <input type="text" id="puestoDatos" />
+      <h2>Ingresa el link de tu foto</h2>
+      <input type="text" id="fotoDatos" />
+      <button type="submit" onclick="registroUser()" class="loginBtn">
+        Enviar
+      </button>
+    </div>
   </body>
   <script src="./crear.js"></script>
 </html>

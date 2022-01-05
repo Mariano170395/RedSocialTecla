@@ -26,7 +26,7 @@ let login = async () => {
     console.log(resjson);
     return resjson
     .then(
-      (window.location.href = `../Feed/Ejercicio-14/feed.html`)
+      window.location.href = `../Feed/Ejercicio-14/feed.html`
     );
   }
 };

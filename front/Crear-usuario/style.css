@@ -23,80 +23,50 @@ body{
     width: 30vmin;
 }
 
-.contenedorTitulo{
-    margin-top: 10vmin;
-    width: 100%;
-    height: 10vmin;
-    background-color: rgb(236, 236, 236);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
 
-.contenedorTitulo h1{
-    font-size: 5vmin;
-}
-
-.contenedorDatosMax{
-    width: 100%;
-    height: 100vmin;
-    background-color: rgb(236, 236, 236);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.contenedorDatos{
-    width: 40%;
-    height: 100vmin;
-    background-color: rgb(100, 176, 238);
+.container-sm{
+    width: 70%;
+    margin-top: 5vmin;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    justify-content: center;
     align-content: center;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    border-radius: 5vmin;
-    border: white 3px solid;
 }
 
-.contenedorDatos label {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white;
-    font-size: 3vmin;
-    margin-left: 4vmin;
-    font-weight: bolder;
-    margin-top: 2.5vmin;
-
+.container-sm h1{
+    font-size: 7vmin;
+    margin: 2vmin 0;
 }
 
-.contenedorDatos input{
-    width: 80%;
+.container-sm h2{
+    font-size: 4.5vmin;
+    margin: 2vmin 0;
+}
+
+.container-sm input{
+    width: 100%;
     height: 4vmin;
-    margin-left: 4vmin;
-    font-size: 2vmin;
+    margin: 2vmin 0;
 }
 
-.contenedorDatos button{
-    width: 60%;
-    height: 3vmin;
-    margin-left: 20%;
+.container-sm h4{
+    font-size: 3vmin;
+    margin: 1vmin 0;
+}
+
+.loginBtn{
+    margin: 2vmin auto;
+    width: 50%;
     background-color: white;
-    border: transparent;
-    margin-bottom: 2vmin;
-    cursor: pointer;
+    border-color: transparent;
+    font-size: 3vmin;
+    font-weight: bold;
+    
 }
 
-.contenedorDatos button:hover{
-    background-color: rgb(236, 236, 236);
-    color: rgb(114, 113, 113)
+.loginBtn:hover{
+    background-color: rgb(100, 176, 238);
+    color: rgb(229, 255, 85);;
+    
 }
-
-

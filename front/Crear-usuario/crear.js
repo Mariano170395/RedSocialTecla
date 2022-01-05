@@ -9,6 +9,8 @@ let registroUser = async () => {
     imagen_usuario: document.getElementById("fotoDatos").value,
   };
 
+  console.log(user)
+
   let res = await fetch("http://localhost:3000/usuario", {
     method: "POST",
     headers: {
