@@ -1,5 +1,7 @@
 const getUser = async () => {
   const respuesta = await fetch("http://localhost:3000/usuario/11");
+  // `https://localhost:3000/users/${usuario.id}`
+
   const post = await respuesta.json()
   //Insertar Datos en Perfil
   //Nombre

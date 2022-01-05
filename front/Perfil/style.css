@@ -83,3 +83,16 @@
   margin: 3vmin;
 }
 
+/* Boton de mensaje */
+.msg-btn{
+  width: 8vmin;
+  position: fixed;
+  left: 92%;
+  bottom: 4%
+}
+
+.msg-btn:hover{
+  width: 8.5vmin;
+}
+
+
