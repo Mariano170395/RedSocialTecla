@@ -33,6 +33,10 @@
     padding: 0%;
 }
 
+.form-group{
+    text-align: left;
+}
+/* 
 .container-sm{
     width: 70%;
     margin-top: 5vmin;
@@ -45,23 +49,27 @@
 
 .container-sm h1{
     font-size: 7vmin;
-    margin: 2vmin 0;
+    margin: 3vmin 0;
 }
 
 .container-sm h2{
-    font-size: 5vmin;
-    margin: 2vmin 0;
+    font-size: 4vmin;
+    margin: 1vmin 0;
 }
 
 .container-sm input{
     width: 40%;
     height: 4vmin;
-    margin: 2vmin 0;
 }
 
 .container-sm h4{
-    font-size: 3vmin;
+    font-size: 2vmin;
     margin: 1vmin 0;
+    text-decoration: none;
+}
+
+.container-sm h4:hover{
+    color: rgb(100, 176, 238);
 }
 
 .loginBtn{
@@ -78,4 +86,4 @@
     background-color: rgb(100, 176, 238);
     color: rgb(229, 255, 85);;
     
-}
+} */

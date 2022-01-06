@@ -19,23 +19,59 @@
         src="./Img/a23b268e-photoroom-20210930-182904_10c806v08104e03h01d028.png"
       />
     </nav>
-    <div class="container-sm">
-      <h1>Ingresa a tu cuenta</h1>
-      <h2>Usuario</h2>
-      <input type="text" id="emailDatos" />
-      <h2>Contraseña</h2>
-      <input type="password" id="passDatos" />
-      <button
-        onclick="login()"
-        class="loginBtn"
-      >
-        Enviar
-      </button>
-      <a href="#"><h4 class="olvidaste">Olvidaste tu Contraseña?</h4></a>
+    <br />
+    <div class="container" style="text-align: center">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card">
+            <br>
+            <div class="card-body">
+              <div class="card-title">
+                <h2>Ingresa a tu cuenta</h2>
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                type="text"
+                id="emailDatos"
+                class="form-control"
+                placeholder="usuario"
+                autofocus
+              />
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input
+                type="password"
+                id="passDatos"
+                class="form-control"
+                placeholder="contraseña"
+              />
+              </div>
+              <br />
+              <button onclick="login()" class="btn btn-primary btn-lg">
+                Enviar
+              </button>
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <a href="#"><p class="olvidaste">Olvidaste tu Contraseña?</p></a>
+
       <a href="../Crear-usuario/crear-usuario.html"
-        ><h4 class="olvidaste">Aun no tienes cuenta?</h4></a
+        ><p class="olvidaste">Aun no tienes cuenta?</p></a
       >
     </div>
   </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
   <script src="./login.js"></script>
 </html>
