@@ -1,38 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 .nav {
   width: 100%;
   height: 15vmin;
-  background-color: rgb(100, 176, 238);
+  background-color: #64b0ee;
   display: flex;
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 3px white solid;
+  border-bottom: 3px white solid; }
 
-}
+.nav img {
+  margin-left: 5vmin;
+  width: 25vmin; }
 
-.nav img{
-    margin-left: 5vmin;
-    width: 30vmin;
-}
+.wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
 
-.wrap{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
+#login {
+  background-color: #6229D9;
+  border: 0 transparent; }
 
+#login:hover {
+  background-color: #64B0EE;
+  color: #e5ff55; }
 
-.body{
-    background-color: rgb(236, 236, 236);
-    margin: 0%;
-    padding: 0%;
-}
+.body {
+  background-color: #ececec;
+  margin: 0%;
+  padding: 0%; }
 
-.form-group{
-    text-align: left;
-}
+.form-group {
+  text-align: left; }
+
+/*# sourceMappingURL=style.css.map */

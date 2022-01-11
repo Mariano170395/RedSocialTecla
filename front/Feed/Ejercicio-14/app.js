@@ -15,11 +15,11 @@ const getDatos = async () => {
     document.getElementById("ImagenPerfil1").innerHTML = imagen;
     //Edad
     let edad = "<h1></h1>";
-    edad += `<h1>Edad: ${post.results[0].registered.age + 20} años</h1>`;
+    edad += `<h1 class='Edad'>Edad: ${post.results[0].registered.age + 20} años</h1>`;
     document.getElementById("Edad").innerHTML = edad;
     //Ubicacion
     let ubicacion = "<h1></h1>";
-    ubicacion += `<h1>Ubicación: ${post.results[0].location.city}, ${post.results[0].location.country}</h1>`;
+    ubicacion += `<h1 class='Ubicacion'>Ubicación: ${post.results[0].location.city}, ${post.results[0].location.country}</h1>`;
     document.getElementById("Ubicacion").innerHTML = ubicacion;
   } catch (error) {
     console.log("algo salio mal");
@@ -28,8 +28,9 @@ const getDatos = async () => {
 
 getDatos();
 
+
 //Boton Comentarios
-let resultadoComent = 0;
+let resultadoComent = 1;
 const OcultarComentario = () => {
   if (resultadoComent == 0) {
     document.getElementById("Comentario").style.display = "block";

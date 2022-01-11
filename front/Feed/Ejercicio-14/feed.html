@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid" style="background-color: rgb(100, 176, 238)">
         <a class="navbar-brand" href="#"
-          ><img 
+          ><img
             class="Logo"
             src="./Img/a23b268e-photoroom-20210930-182904_10c806v08104e03h01d028.png"
             alt="Logo"
@@ -36,7 +36,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../../Amigos/amigos.html"
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../../Amigos/amigos.html"
                 ><h1>Amigos</h1></a
               >
             </li>
@@ -44,65 +47,77 @@
               <a class="nav-link" href="#"><h1>Proyectos</h1></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../Perfil/perfil.html"><h1>Perfil</h1></a>
+              <a class="nav-link" href="../../Perfil/perfil.html"
+                ><h1>Perfil</h1></a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><h1>Notificaciones</h1></a>
             </li>
           </ul>
-          <h1 class="saludo" id='saludoPerfil'>Hola</h1>
+          <h1 class="saludo" id="saludoPerfil">Hola</h1>
         </div>
       </div>
     </nav>
-    <!-- Espacio -->
-     <div class="espacio"></div>
-
+    <br />
+    <br />
+    <br />
+    <!-- Main -->
     <div class="container">
-      <div class="row">
-
-        <div class="col-12" id="Nombre">
-        </div>
-        <div class="col-4" >
-
-          <div id='ImagenPerfil1'></div>
-          <div id='Edad'></div>
-          <div id='Ubicacion'></div>
-        </div>
-        <div class="col-8">
-          <div class="contenedorInfo">
+      <div class="card mb-3">
+        <div class="row">
+          <div class="col-3">
+            <div id="ImagenPerfil1"></div>
+            <div id="Nombre"></div>
+            <div id="Edad"></div>
+            <div id="Ubicacion"></div>
+            <div class="espacio"></div>
+          </div>
+          <div class="col-9">
             <img
               src="https://picsum.photos/300/150"
               class="imagenInfo"
               alt="ImagenContenedor"
             />
-            <h1 class="textoInfo">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              similique laudantium asperiores commodi eum eos obcaecati delectus
-              reprehenderit? Commodi vitae repellendus maxime ab nihil quod
-              reiciendis molestias maiores adipisci eum!
-            </h1>
+            <div class="card-body">
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+                similique laudantium asperiores commodi eum eos obcaecati
+                delectus reprehenderit? Commodi vitae repellendus maxime ab
+                nihil quod reiciendis molestias maiores adipisci eum!
+              </p>
+            </div>
           </div>
-          <br />
         </div>
-        <div class="col-12" id="Col12">
+      </div>
+      <div class="col-12">
+            <a href="#" class="btn btn-primary">Me gusta</a>
+            <a href="#" class="btn btn-primary" onclick="OcultarComentario()">Comentar</a>
+        </div>
+      </div>
+
+    <!-- <div class="col-12" id="Col12">
           <button>Me Gusta</button>
           <button>Compartir</button>
           <button onclick="OcultarComentario()">Comentar</button>
           <br />
-        </div>
-      </div> -
-      <!-- Comentario -->
-       <div class="contenedorComentario" id='Comentario'>
+        </div> -->
+    <!-- </div> -->
+    <!-- Comentario -->
+    <!-- <div class="contenedorComentario" id='Comentario'>
       <div class="col-11">
         <input placeholder="Escribe un Comentario..." type="text"></input>
       </div>
       <div class="col-12" id='col12btn'>
         <button>Enviar</button>
       </div>
-    </div> 
-    </div>
+    </div>  -->
+    <!-- </div> -->
+    <!-- Boton mensaje -->
     <div class="div-btn-msj">
-     <a href="#"><img src="../Ejercicio-14/Img/pngegg.png" class="msg-btn"/></a> 
+      <a href="#"
+        ><img src="../Ejercicio-14/Img/pngegg.png" class="msg-btn"
+      /></a>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

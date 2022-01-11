@@ -1,11 +1,7 @@
 const gameController = require("../controller/usuario");
 
 module.exports = (app) => {
-  //Para solucionar el problema de los headers
-  app.use(function(req,res, next){
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Accept');
-    next()
-  })
+
   //listar todos los users
   app.get("/usuario", async (req, res) => {
     let result = await gameController.listGames();

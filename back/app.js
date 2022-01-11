@@ -1,11 +1,13 @@
 //instalo express
 const express = require("express");
+const cors = require('cors')
 let app = express();
 
 //Inicializo dotenv
 require("dotenv").config();
 //uso mi middleware json de express
 app.use(express.json());
+app.use(cors())
 const juegosView = require("./view/usuario");
 const sequelize = require("./db/conexion");
 
