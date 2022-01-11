@@ -16,7 +16,7 @@
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid" style="background-color: rgb(100, 176, 238)">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="./feed.html"
           ><img
             class="Logo"
             src="./Img/a23b268e-photoroom-20210930-182904_10c806v08104e03h01d028.png"
@@ -52,10 +52,11 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><h1>Notificaciones</h1></a>
+              <a class="nav-link" href="../../Login/login.html" onclick="cerrarSesion()"><h1>Cerrar</h1></a>
             </li>
           </ul>
-          <h1 class="saludo" id="saludoPerfil">Hola</h1>
+          <div class="saludo" id="saludoPerfil">
+          </div>
         </div>
       </div>
     </nav>
@@ -91,29 +92,12 @@
         </div>
       </div>
       <div class="col-12">
-            <a href="#" class="btn btn-primary">Me gusta</a>
-            <a href="#" class="btn btn-primary" onclick="OcultarComentario()">Comentar</a>
-        </div>
+        <a href="#" class="btn btn-primary">Me gusta</a>
+        <a href="#" class="btn btn-primary" onclick="OcultarComentario()"
+          >Comentar</a
+        >
       </div>
-
-    <!-- <div class="col-12" id="Col12">
-          <button>Me Gusta</button>
-          <button>Compartir</button>
-          <button onclick="OcultarComentario()">Comentar</button>
-          <br />
-        </div> -->
-    <!-- </div> -->
-    <!-- Comentario -->
-    <!-- <div class="contenedorComentario" id='Comentario'>
-      <div class="col-11">
-        <input placeholder="Escribe un Comentario..." type="text"></input>
-      </div>
-      <div class="col-12" id='col12btn'>
-        <button>Enviar</button>
-      </div>
-    </div>  -->
-    <!-- </div> -->
-    <!-- Boton mensaje -->
+    </div>
     <div class="div-btn-msj">
       <a href="#"
         ><img src="../Ejercicio-14/Img/pngegg.png" class="msg-btn"

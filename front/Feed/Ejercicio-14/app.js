@@ -2,6 +2,13 @@ const url = "https://randomuser.me/api/";
 
 const getDatos = async () => {
   try {
+    let userParse = JSON.parse(localStorage.getItem('userData'))
+    console.log(userParse)
+    // localStorage.clear()
+    //Saludo
+    let saludo = '<h1 class="NombreSaludo"></h1>'
+    saludo += `<a href ="../../Perfil/perfil.html" class="Hola"><h1 class="NombreSaludo">${userParse[0].nombres_usuario}</h1></a>`
+    document.getElementById('saludoPerfil').innerHTML = saludo
     //Fetch
     const respuesta = await fetch(url);
     const post = await respuesta.json();
@@ -40,3 +47,9 @@ const OcultarComentario = () => {
     resultadoComent = 0;
   }
 };
+
+
+let cerrarSesion =()=>{
+  console.log('Hola')
+  localStorage.clear()
+}

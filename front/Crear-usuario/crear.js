@@ -26,3 +26,4 @@ let registroUser = async () => {
 
   window.location.href = '../Login/login.html'
 };
+

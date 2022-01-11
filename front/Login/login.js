@@ -31,8 +31,9 @@ let login = async () => {
         resjson[0].correo_usuario == user.correo_usuario &&
         resjson[0].contrasena_usuario == user.contrasena_usuario
       ) {
+        let userData = JSON.stringify(resjson)
+        localStorage.setItem('userData', userData)
         window.location.href = `../Feed/Ejercicio-14/feed.html`;
-
       }
     } catch (error) {
       alert("los datos introducidos fueron incorrectos");
