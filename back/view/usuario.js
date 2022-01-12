@@ -50,7 +50,7 @@ module.exports = (app) => {
   });
 
   //Modificar Nombres
-  app.put("/usuario/nombre/:id", async (req, res) => {
+  app.put("/usuario/nombre/", async (req, res) => {
     const nuevosNombres = req.body;
     let updateName = await gameController.updatearNombre(nuevosNombres);
     res.json(updateName);

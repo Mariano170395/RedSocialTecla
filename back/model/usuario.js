@@ -29,7 +29,7 @@ let addPst = async (pst) =>{
 
 let updateName = async (usuario) => {
   await sequelize.query(
-    `UPDATE crear_usuario SET nombres_usuario = '${usuario.nombres_usuario}' WHERE user_id = '${usuario.user_id}'`
+    `UPDATE crear_usuario SET nombres_usuario = '${usuario.nombres_usuario}' WHERE contrasena_usuario = '${usuario.contrasena_usuario}'`
   );
 };
 
