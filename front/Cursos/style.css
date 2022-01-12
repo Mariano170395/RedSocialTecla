@@ -91,10 +91,13 @@ body{
 
   #btnSubmit{
     background-color: #6229D9;
-    border: 0 transparent
+    border: 0 transparent;
+    font-weight: bold;
+    font-size: 2vmin;
   }
 
   #btnSubmit:hover{
     background-color: rgb(100, 176, 238);
     color: rgb(229, 255, 85);
   }
+

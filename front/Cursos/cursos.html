@@ -16,10 +16,60 @@
 
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid" style="background-color: rgb(100, 176, 238)">
+        <a class="navbar-brand" href="../Feed/Ejercicio-14/feed.html"
+          ><img
+            class="Logo"
+            src="./Img/a23b268e-photoroom-20210930-182904_10c806v08104e03h01d028.png"
+            alt="Logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../Amigos/amigos.html"
+                ><h1>Amigos</h1></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Cursos/cursos.html"><h1>Cursos</h1></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Perfil/perfil.html"
+                ><h1>Perfil</h1></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Login/login.html" onclick="cerrarSesion()"><h1>Cerrar</h1></a>
+            </li>
+          </ul>
+          <div class="saludo" id="saludoPerfil">
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <br>
     <div id="root"></div>
 
     <script type="text/babel">
+
       const app = document.querySelector("#root");
+      //Componente Curso
       let FormCurso = (props) => {
         return (
           <div className="container">
@@ -62,7 +112,7 @@
                   />
                 </div>
                 <button type="submit" className="btn btn-primary" id='btnSubmit'>
-                  Submit Hola
+                  Submit
                 </button>
               </form>
             </div>
@@ -70,6 +120,7 @@
         );
       };
 
+      //Render
       ReactDOM.render(
 
         <>

@@ -11,6 +11,9 @@
     />
     <title>Teclanautas</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
     <!-- NavBar -->
@@ -44,7 +47,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><h1>Proyectos</h1></a>
+              <a class="nav-link" href="../../Cursos/cursos.html"><h1>Cursos</h1></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../../Perfil/perfil.html"
@@ -52,17 +55,22 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../Login/login.html" onclick="cerrarSesion()"><h1>Cerrar</h1></a>
+              <a
+                class="nav-link"
+                href="../../Login/login.html"
+                onclick="cerrarSesion()"
+                ><h1>Cerrar</h1></a
+              >
             </li>
           </ul>
-          <div class="saludo" id="saludoPerfil">
-          </div>
+          <div class="saludo" id="saludoPerfil"></div>
         </div>
       </div>
     </nav>
     <br />
     <br />
-    <br />
+    <!-- Postea -->
+    <div id="root"></div>
     <!-- Main -->
     <div class="container">
       <div class="card mb-3">
@@ -103,6 +111,49 @@
         ><img src="../Ejercicio-14/Img/pngegg.png" class="msg-btn"
       /></a>
     </div>
+    <script type="text/babel">
+      const app = document.querySelector("#root");
+
+      let Post = () => {
+        return (
+          <div className="container" id="containerNuevo">
+            <div className="card">
+              <h5 className="card-header">Crear Post</h5>
+              <div className="card-body">
+                <div className="row">
+                  <div className="col-12">
+                    <input
+                      type="text"
+                      placeholder="Que quieres contarnos?"
+                      className="inputPost"
+                      id="inputPost"
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-12" id="flexBtn">
+                    <button
+                      type="submit"
+                      className="btn btn-primary"
+                      id="btnSubmit"
+                    >
+                      Enviar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      };
+
+      ReactDOM.render(
+        <>
+          <Post />
+        </>,
+        app
+      );
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
