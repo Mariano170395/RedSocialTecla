@@ -78,11 +78,25 @@
 
       //Componente Curso
       let FormCurso = (props) => {
-        const [curso, setCurso] = useState("");
 
-        const inputHandle = (e) => {
-          setCurso(console.log(e.target.value));
+        const [nombreCurso, setNombreCurso] = useState("");
+        const [lugarCurso, setLugarCurso] = useState("");
+        const [fechaCurso, setFechaCurso] = useState("");
+
+        const inputNombreHandle = (e) => {
+          setNombreCurso(console.log('Nombre:', e.target.value));
         };
+       
+
+        const inputLugarHandle = (e) => {
+          setLugarCurso(console.log('Lugar:', e.target.value));
+        };
+        
+
+        const inputFechaHandle = (e) => {
+          setFechaCurso(console.log('Fecha:', e.target.value));
+        };
+
 
         return (
           <div className="container">
@@ -100,7 +114,7 @@
                     className="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
-                    onChange={inputHandle}
+                    onChange={inputNombreHandle}
                   />
                 </div>
                 <div className="mb-3">
@@ -112,7 +126,7 @@
                     className="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
-                    onChange={inputHandle}
+                    onChange={inputLugarHandle}
                   />
                 </div>
                 <div className="mb-3">
@@ -124,7 +138,7 @@
                     className="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
-                    onChange={inputHandle}
+                    onChange={inputFechaHandle}
                   />
                 </div>
                 <button
