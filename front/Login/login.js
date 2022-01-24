@@ -30,7 +30,7 @@ let login = async () => {
       if (
         resjson[0].correo_usuario == user.correo_usuario &&
         resjson[0].contrasena_usuario == user.contrasena_usuario
-      ) {
+      ){
         let userData = JSON.stringify(resjson)
         localStorage.setItem('userData', userData)
         window.location.href = `../Feed/Ejercicio-14/feed.html`;

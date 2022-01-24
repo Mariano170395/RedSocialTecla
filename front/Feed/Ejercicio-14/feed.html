@@ -47,7 +47,9 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../Cursos/cursos.html"><h1>Cursos</h1></a>
+              <a class="nav-link" href="../../Cursos/cursos.html"
+                ><h1>Cursos</h1></a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../../Perfil/perfil.html"
@@ -113,35 +115,58 @@
     </div>
     <script type="text/babel">
       const app = document.querySelector("#root");
+      const { useState } = React;
 
       let Post = () => {
+        const [posts, setPosts]=useState([{
+          id: 1,
+          titulo_post:'',
+          comentario_post:'' 
+        }])
+
+        const submit = (e)=>{
+          e.preventDefault()
+
+          let newPost = {
+            id: posts.length + 1,
+            titulo_post: e.target[0].value,
+            comentario_post: e.target[1].value
+          }
+
+          setPosts([...posts, newPost])
+
+          console.log(newPost)
+          console.log(posts);
+        }
+
         return (
           <div className="container" id="containerNuevo">
             <div className="card">
-              <h5 className="card-header">Crear Post</h5>
-              <div className="card-body">
-                <div className="row">
-                  <div className="col-12">
-                    <input
-                      type="text"
-                      placeholder="Que quieres contarnos?"
-                      className="inputPost"
-                      id="inputPost"
-                    />
+              <form onSubmit={submit}>
+                <div className="mb-3">
+                  <label className="form-label" placeholder="Nombre del Autor">
+                    Autor
+                  </label>
+                  <input type="text" className="form-control" required />
+                </div>
+                <div className="mb-3">
+                  <label for="exampleInputPassword1" className="form-label">
+                    Quote:
+                  </label>
+                </div>
+                <div className="mb-3 form-check">
+                  <div className="form-floating">
+                    <textarea
+                      className="form-control"
+                      placeholder="Escribe tu cita aqui"
+                      id="floatingTextarea2"
+                      required
+                    ></textarea>
                   </div>
                 </div>
-                <div className="row">
-                  <div className="col-12" id="flexBtn">
-                    <button
-                      type="submit"
-                      className="btn btn-primary"
-                      id="btnSubmit"
-                    >
-                      Enviar
-                    </button>
-                  </div>
-                </div>
-              </div>
+
+                <button className="btn btn-primary">Submit</button>
+              </form>
             </div>
           </div>
         );

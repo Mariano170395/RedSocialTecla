@@ -78,25 +78,31 @@
 
       //Componente Curso
       let FormCurso = (props) => {
-
         const [nombreCurso, setNombreCurso] = useState("");
         const [lugarCurso, setLugarCurso] = useState("");
         const [fechaCurso, setFechaCurso] = useState("");
+        const [submit, setSubmit] = useState([]);
 
         const inputNombreHandle = (e) => {
-          setNombreCurso(console.log('Nombre:', e.target.value));
+          setNombreCurso(e.target.value);
         };
-       
 
         const inputLugarHandle = (e) => {
-          setLugarCurso(console.log('Lugar:', e.target.value));
+          setLugarCurso(e.target.value);
         };
-        
 
         const inputFechaHandle = (e) => {
-          setFechaCurso(console.log('Fecha:', e.target.value));
+          setFechaCurso(e.target.value);
         };
 
+        const handleSubmit = () => {
+          setSubmit({
+            nombre: nombreCurso,
+            lugar: lugarCurso,
+            fecha: fechaCurso,
+          });
+          console.log(submit);
+        };
 
         return (
           <div className="container">
@@ -142,14 +148,29 @@
                   />
                 </div>
                 <button
-                  type="submit"
+                  type="button"
                   className="btn btn-primary"
                   id="btnSubmit"
+                  onClick={handleSubmit}
                 >
                   Submit
                 </button>
               </form>
             </div>
+            <br />
+            <br />
+            {submit.nombre && (
+              <>
+                <div className="card" id="cardTitulo">
+                  <h1 className="title">Curso:</h1>
+                </div>
+                <div className="card">
+                  <label className="form-label">Título: {submit.nombre}</label>
+                  <label className="form-label">Lugar: {submit.lugar}</label>
+                  <label className="form-label">Fecha: {submit.fecha}</label>
+                </div>
+              </>
+            )}
           </div>
         );
       };

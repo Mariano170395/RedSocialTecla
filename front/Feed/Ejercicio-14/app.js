@@ -49,7 +49,7 @@ const OcultarComentario = () => {
 };
 
 
+
 let cerrarSesion =()=>{
-  console.log('Hola')
   localStorage.clear()
 }

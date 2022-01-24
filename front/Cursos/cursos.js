@@ -1,10 +1,3 @@
-let titulo = document.querySelector('#titulo_js')
-titulo.textContent = 'Titulo desde JS con query'
-
-const item = document.querySelector("#lista .item_lista")
-item.textContent='Mi item desde js'
-
-
 
 let userParse = JSON.parse(localStorage.getItem('userData'))
 console.log(userParse[0])
@@ -14,7 +7,6 @@ saludo += `<a href ="../../Perfil/perfil.html" class="Hola"><h1 class="NombreSal
 document.getElementById('saludoPerfil').innerHTML = saludo
 
 let cerrarSesion =()=>{
-    console.log('Hola')
     localStorage.clear()
 }
 

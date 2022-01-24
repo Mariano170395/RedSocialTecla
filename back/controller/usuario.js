@@ -5,6 +5,7 @@ module.exports.listGames = async () => {
   return result;
 };
 
+//Agregar user
 module.exports.addGame = async (game) => {
   await juegoModel.add(game);
   return "Siuuuuu";

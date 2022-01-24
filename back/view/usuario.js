@@ -1,28 +1,30 @@
 const gameController = require("../controller/usuario");
 
 module.exports = (app) => {
-
+  app.get("/", (req,res)=>{
+    res.json('Hola')
+  })
   //listar todos los users
   app.get("/usuario", async (req, res) => {
     let result = await gameController.listGames();
     res.json(result);
   });
 
-    //Login
+  //Login
 
-     app.get('/login',async (req,res)=>{
-       let log = req.body;
-       console.log(log)
-       let result = await gameController.logUser(log)
-       res.json(result)
-     })
+  app.get("/login", async (req, res) => {
+    let log = req.body;
+    console.log(log);
+    let result = await gameController.logUser(log);
+    res.json(result);
+  });
 
-    app.post('/login',async (req,res)=>{
-      let log = req.body;
-      console.log(log)
-      let result = await gameController.logUser(log)
-      res.json(result)
-    })
+  app.post("/login", async (req, res) => {
+    let log = req.body;
+    console.log(log);
+    let result = await gameController.logUser(log);
+    res.json(result);
+  });
 
   //listar por id
   app.get("/usuario/:id", async (req, res) => {
@@ -42,7 +44,6 @@ module.exports = (app) => {
 
   //Agregar un post
   app.post("/post", async (req, res) => {
-
     let post = req.body;
     console.log(post);
     let result = await gameController.addPt(post);
@@ -83,5 +84,4 @@ module.exports = (app) => {
     let updateImagen = await gameController.updatearImagen(nuevaImg);
     res.json(updateImagen);
   });
-
 };
